@@ -65,7 +65,6 @@ header {
   justify-content: center;
 
   .container-fluid {
-    position: fixed;
     align-items: center;
     padding: 10px 40px;
   }
