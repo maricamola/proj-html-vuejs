@@ -7,7 +7,15 @@ export default {
 <template>
   <main>
     <section>Foto grande con timing</section>
-    <section>Foto in movimento</section>
+
+    <section class="motion d-flex justify-content-center">
+      <div class="gift">Foto</div>
+      <div class="text">Testo</div>
+    </section>
+
+
+
+
     <section>Cards slider</section>
     <section>Cards events stile bootstrap</section>
     <section>Cards profili trainers</section>
@@ -15,4 +23,14 @@ export default {
   </main>
 </template>
 
-<style></style>
+<style lang="scss" scoped>
+.motion {
+  border: 1px solid black;
+
+  .gift,
+  .text {
+    border: 1px solid black;
+
+  }
+}
+</style>
