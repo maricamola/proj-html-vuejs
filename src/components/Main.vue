@@ -23,7 +23,7 @@ export default {
             We offer 6 courses of varying difficulty and beautiful scenery that cyclists of all levels can enjoy. You will
             learn cycling from professionals with our competent and experienced staff. You will have a lot of fun with our
             amazing space.</p>
-          <img src="" alt="">
+          <img src="divider.jpg" alt="divider">
           <h3>Professional Team</h3>
           <p>We make you professional by adding your sincerity as well as professionalism.</p>
           <h3>Professional Trainings</h3>
@@ -32,11 +32,6 @@ export default {
         </div>
       </section>
     </div>
-
-
-
-
-
 
 
     <section>Cards slider</section>
