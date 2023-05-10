@@ -107,8 +107,10 @@ header {
   }
 
   .toggle {
-    border: 1px solid black;
+    color: white;
+    background-color: black;
     padding: 20px;
+    margin-left: 20px;
   }
 
   .toggle i {

@@ -50,7 +50,7 @@ export default {
             <p>We make you professional by adding your sincerity as well as professionalism.</p>
             <h3>Professional Trainings</h3>
             <p>We always ride with the best equipment, respecting nature and fun.</p>
-            <span>Get to know us →</span>
+            <div class="subscribe"><button>Get to know us →</button></div>
           </div>
         </section>
       </div>
@@ -111,17 +111,26 @@ export default {
 
 .moving .container {
   padding: 80px 0;
+
+  .subscribe button {
+    color: white;
+    padding: 20px;
+    background-color: black;
+    border: none;
+  }
 }
 
 .motion {
-  border: 1px solid black;
   width: 80%;
   margin: 0 auto;
 
   .gift,
   .text {
-    border: 1px solid black;
     width: 50%;
+  }
+
+  .text {
+    padding: 30px;
   }
 
   .gift,
