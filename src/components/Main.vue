@@ -1,6 +1,17 @@
 <script>
+import CardsEvents from './CardsEvents.vue'
+import events from '../scss/data/events';
+
 export default {
-  name: 'Main'
+  name: 'Main',
+  data() {
+    return {
+      events
+    }
+  },
+  components: {
+    CardsEvents
+  }
 }
 </script>
 
@@ -28,20 +39,43 @@ export default {
           <p>We make you professional by adding your sincerity as well as professionalism.</p>
           <h3>Professional Trainings</h3>
           <p>We always ride with the best equipment, respecting nature and fun.</p>
-          <span><Button>Get to know us →</Button></span>
+          <span>Get to know us →</span>
         </div>
       </section>
     </div>
 
 
     <section>Cards slider</section>
-    <section>Cards events stile bootstrap</section>
+
+
+    <!-- Sezione cards eventi -->
+    <section>
+      <div class="title">
+        <h1>Don't Miss Our Events!</h1>
+        <p>Get the amazing cycling experience.</p>
+      </div>
+
+      <div class="container-fluid d-flex justify-content-between">
+
+        <CardsEvents v-for="(event, index) in events" :key="index" :title="event.title" :date="event.date"
+          :time="event.time" :country="event.country" :type="event.type" />
+
+      </div>
+
+
+
+
+    </section>
+
     <section>Cards profili trainers</section>
     <section>Cards pacchetti</section>
   </main>
 </template>
 
 <style lang="scss" scoped>
+@use '../scss/main.scss';
+@use '../scss/partials/vars.scss';
+
 .motion {
   border: 1px solid black;
   width: 80%;
@@ -79,5 +113,20 @@ export default {
     top: 0;
     left: 0;
   }
+}
+
+.title {
+  text-align: center;
+
+  h3 {
+    font-size: 22px;
+    line-height: 1.42;
+    font-weight: 700;
+  }
+}
+
+.container-fluid {
+  padding: 10px 40px;
+  flex-wrap: wrap;
 }
 </style>

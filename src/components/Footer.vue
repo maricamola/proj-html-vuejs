@@ -6,7 +6,8 @@ export default {
 
 <template>
   <footer>
-    <div class="container-fluid d-flex">
+    <div class="container-fluid d-flex justify-content-between">
+
       <section class="icons d-flex flex-column">
         <span><img src="logo-footer-gobike.png" alt="logo"></span>
         <span><i class="fa-solid fa-location-dot"></i> New Jersey, USA </span>
@@ -64,7 +65,7 @@ footer {
   padding: 100px;
 
   .container-fluid img {
-    width: 20%;
+    width: 200px;
   }
 
   button {
@@ -73,6 +74,7 @@ footer {
 
   ul li {
     list-style: none;
+    margin-bottom: 10px;
   }
 
   li {
