@@ -59,8 +59,9 @@ export default {
 @use '../scss/partials/vars.scss';
 
 header {
-  border: 3px solid black;
-  height: 100px;
+  height: 90px;
+  width: 100%;
+  background-color: white;
   display: flex;
   justify-content: center;
 

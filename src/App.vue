@@ -2,6 +2,10 @@
 import Header from './components/Header.vue'
 import Main from './components/Main.vue'
 import Footer from './components/Footer.vue'
+import { Swiper, SwiperSlide } from 'swiper/vue';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import { Navigation } from 'swiper';
 
 
 export default {
@@ -9,8 +13,15 @@ export default {
   components: {
     Header,
     Main,
-    Footer
-  }
+    Footer,
+    Swiper,
+    SwiperSlide,
+  },
+  setup() {
+    return {
+      modules: [Navigation],
+    };
+  },
 }
 </script>
 

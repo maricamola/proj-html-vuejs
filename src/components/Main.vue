@@ -1,4 +1,5 @@
 <script>
+import Timing from './Timing.vue'
 import CardsEvents from './CardsEvents.vue'
 import Articles from './Articles.vue'
 import events from '../scss/data/events';
@@ -12,7 +13,8 @@ export default {
   },
   components: {
     CardsEvents,
-    Articles
+    Articles,
+    Timing
   }
 }
 </script>
@@ -20,7 +22,9 @@ export default {
 <template>
   <main>
     <!-- Sezione cards timing -->
-    <section class="timing">Foto grande con timing</section>
+    <section class="timing">
+      <Timing />
+    </section>
 
     <!-- Sezione moving -->
     <section class="moving">
@@ -90,7 +94,7 @@ export default {
 @use '../scss/partials/vars.scss';
 
 // PRIMA SECTION - TIMING 
-.timing,
+
 .swiperCards,
 .trainersCards,
 .packagesCards {
@@ -99,9 +103,9 @@ export default {
   background-color: bisque;
 }
 
-section {
-  padding: 100px;
-}
+// section  {
+//   padding: 100px;
+// }
 
 // SEZIONE MOVING CARDS
 
@@ -150,6 +154,7 @@ section {
 
 .title {
   text-align: center;
+  margin-bottom: 40px;
 
   h3 {
     font-size: 22px;

@@ -1,6 +1,6 @@
 export default [
   {
-    "image": "./scss/components/public/event1jpg",
+    "image": "/public/event1.jpg",
     "title": "Toronto Cycling Event 2023",
     "date": "10/05/2023",
     "time": "10.10",
@@ -8,7 +8,7 @@ export default [
     "type": "Bicycle Race"
   },
   {
-    "image": "event2jpg",
+    "image": "/public/event2.jpg",
     "title": "Istanbul Cycling Event 2023",
     "date": "10/05/2023",
     "time": "10.10",
@@ -16,7 +16,7 @@ export default [
     "type": "Bike Sport"
   },
   {
-    "image": "event3jpg",
+    "image": "/public/event3.jpg",
     "title": "Paris Cycling Event 2023",
     "date": "10/05/2023",
     "time": "10.10",
@@ -24,7 +24,7 @@ export default [
     "type": "Bike Sport"
   },
   {
-    "image": "event4jpg",
+    "image": "/public/event4.jpg",
     "title": "New Jersey Cycling Event 2023",
     "date": "10/05/2023",
     "time": "10.10",
@@ -32,7 +32,7 @@ export default [
     "type": "Bicycle Race"
   },
   {
-    "image": "event5jpg",
+    "image": "/public/event5.jpg",
     "title": "London Cycling Event 2023",
     "date": "10/05/2023",
     "time": "10.10",
@@ -40,7 +40,7 @@ export default [
     "type": "Bike Sport"
   },
   {
-    "image": "event6jpg",
+    "image": "/public/event6.jpg",
     "title": "Kiev Cycling Event 2023",
     "date": "10/05/2023",
     "time": "10.10",
@@ -48,7 +48,7 @@ export default [
     "type": "Bicycle Race"
   },
   {
-    "image": "event7jpg",
+    "image": "/public/event7.jpg",
     "title": "Colorado Cycling Event 2023",
     "date": "10/05/2023",
     "time": "10.10",
@@ -56,7 +56,7 @@ export default [
     "type": "Bike Sport"
   },
   {
-    "image": "event8jpg",
+    "image": "/public/event8.jpg",
     "title": "Amsterdam Cycling Event 2023",
     "date": "10/05/2023",
     "time": "10.10",
@@ -64,7 +64,7 @@ export default [
     "type": "Bike Sport"
   },
   {
-    "image": "event9jpg",
+    "image": "/public/event9.jpg",
     "title": "Toronto Cycling Event 2023",
     "date": "10/05/2023",
     "time": "10.10",
@@ -72,7 +72,7 @@ export default [
     "type": "Bike Sport"
   },
   {
-    "image": "event10jpg",
+    "image": "/public/event10.jpg",
     "title": "Paris Cycling Event 2023",
     "date": "10/05/2023",
     "time": "10.10",
