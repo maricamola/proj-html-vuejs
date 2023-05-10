@@ -32,10 +32,12 @@ export default {
 
 
 <template>
-  <swiper :modules="modules" :slides-per-view="1" :space-between="50" navigation :pagination="{ clickable: true }"
+  <swiper :modules="modules" :slides-per-view="1" :space-between="50"
+    :navigation="{ nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' }" :pagination="{ clickable: true }"
     :scrollbar="{ draggable: true }" @swiper="onSwiper" @slideChange="onSlideChange">
-    <swiper-slide><img src="slider-bike-4.jpg" alt="Bike">
-    </swiper-slide>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+    <swiper-slide><img src="slider-bike-4.jpg" alt="Bike"></swiper-slide>
     <swiper-slide><img src="slider-bike-9.jpg" alt="Bike"></swiper-slide>
     <swiper-slide><img src="slider-bike-12.jpg" alt="Bike"></swiper-slide>
   </swiper>
@@ -66,5 +68,13 @@ export default {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  background-color: black;
+  padding: 30px;
+  color: white;
+  margin: 50px;
 }
 </style>
