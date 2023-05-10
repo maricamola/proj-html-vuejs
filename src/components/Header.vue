@@ -59,8 +59,10 @@ export default {
 @use '../scss/partials/vars.scss';
 
 header {
+  position: fixed;
   height: 90px;
   width: 100%;
+  z-index: 999;
   background-color: white;
   display: flex;
   justify-content: center;
