@@ -21,7 +21,7 @@ export default {
 <template>
   <div class="card" style="width: 24rem;">
     <span class="date">Numb <br> Mese</span>
-    <img src="slider-bike-4.jpg" class="bike" alt="bike">
+    <img :src="image" :alt="bike - event">
     <div class="card-body">
       <h3>{{ title }}</h3>
       <p class="card-text">

@@ -59,7 +59,7 @@ export default {
 @use '../scss/partials/vars.scss';
 
 header {
-  background-color: aquamarine;
+  border: 3px solid black;
   height: 100px;
   display: flex;
   justify-content: center;
