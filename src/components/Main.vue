@@ -2,13 +2,15 @@
 import Timing from './Timing.vue'
 import CardsEvents from './CardsEvents.vue'
 import Articles from './Articles.vue'
+import stories from '../scss/data/stories';
 import events from '../scss/data/events';
 
 export default {
   name: 'Main',
   data() {
     return {
-      events
+      events,
+      stories,
     }
   },
   components: {
@@ -83,7 +85,16 @@ export default {
 
     <!-- Sezione cards articles -->
     <section class="articles">
-      <Articles />
+      <div class="title">
+        <h2> Resent New & Articles </h2>
+        <p>
+          Important information about bike </p>
+      </div>
+      <div class="container-fluid d-flex justify-content-between">
+        <Articles v-for="(story, index) in stories" :key="index" :image="story.image" :date="story.date"
+          :title="story.title" :text="story.text" />
+      </div>
+
     </section>
 
   </main>
@@ -170,6 +181,13 @@ export default {
     line-height: 1.42;
     font-weight: 700;
   }
+}
+
+// SEZIONE ARTICOLI 
+
+.articles {
+  background-color: #FBFBFB;
+  padding: 150px 0;
 }
 
 .container-fluid {
