@@ -36,9 +36,13 @@ export default {
   <swiper :modules="modules" :slides-per-view="4" :space-between="50"
     :navigation="{ nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' }" :pagination="{ clickable: true }"
     :scrollbar="{ draggable: true }" @swiper="onSwiper" @slideChange="onSlideChange">
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
-    <swiper-slide><img src="training-box-4.jpg" alt="Bike"></swiper-slide>
+    <swiper-slide>
+      <div class="image-container"> <img src="training-box-4.jpg" alt="Bike">
+        <div class="image-text">
+          <h5>Trail Drive</h5>
+        </div>
+      </div>
+    </swiper-slide>
 
     <swiper-slide>
       <div class="image-container"> <img src="training-box-1.jpg" alt="Bike">
@@ -48,14 +52,37 @@ export default {
       </div>
     </swiper-slide>
 
-    <swiper-slide><img src="training-box-2.jpg" alt="Bike"></swiper-slide>
-    <swiper-slide><img src="training-box-3.jpg" alt="Bike"></swiper-slide>
-    <swiper-slide><img src="training-box-5.jpg" alt="Bike"></swiper-slide>
+    <swiper-slide>
+      <div class="image-container"> <img src="training-box-2.jpg" alt="Bike">
+        <div class="image-text">
+          <h5>Safe Driving</h5>
+        </div>
+      </div>
+    </swiper-slide>
+
+    <swiper-slide>
+      <div class="image-container"> <img src="training-box-3.jpg" alt="Bike">
+        <div class="image-text">
+          <h5>Mountain Bike</h5>
+        </div>
+      </div>
+    </swiper-slide>
+
+    <swiper-slide>
+      <div class="image-container"> <img src="training-box-5.jpg" alt="Bike">
+        <div class="image-text">
+          <h5>Pedaling</h5>
+        </div>
+      </div>
+    </swiper-slide>
+
+    <swiper-pagination class="swiper-pagination"></swiper-pagination>
+    <div class="swiper-button-container">
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
   </swiper>
 </template>
-
-
-
 
 
 
@@ -69,8 +96,6 @@ export default {
   text-align: center;
   font-size: 18px;
   background: #fff;
-
-  /* Center slide text vertically */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -89,14 +114,24 @@ export default {
   }
 }
 
-.swiper-button-next,
-.swiper-button-prev {
-  background-color: black;
-  padding: 30px;
-  color: white;
-  margin: 50px;
+//BUTTON NEXT - BUTTON PREV
+.swiper-button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+.swiper-button-next,
+.swiper-button-prev {
+  position: relative;
+  background-color: white;
+  padding: 30px;
+  color: black;
+  margin: 50px 20px;
+  border: 1px solid black;
+}
+
+//PER IL TESTO ALL'INTERNO DELL'IMG
 .image-container {
   position: relative;
 }
