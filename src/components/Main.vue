@@ -3,6 +3,7 @@ import Timing from './Timing.vue'
 import CyclingTrainings from './CyclingTrainings.vue'
 import CardsEvents from './CardsEvents.vue'
 import TrainerProfiles from './TrainerProfiles.vue'
+import Packs from './Packs.vue'
 import Articles from './Articles.vue'
 import stories from '../scss/data/stories';
 import events from '../scss/data/events';
@@ -23,7 +24,8 @@ export default {
     Articles,
     Timing,
     TrainerProfiles,
-    CyclingTrainings
+    CyclingTrainings,
+    Packs,
   }
 }
 </script>
@@ -108,7 +110,15 @@ export default {
     </section>
 
     <!-- Sezione cards packages -->
-    <section class="packagesCards">Cards pacchetti</section>
+    <section class="packagesCards">
+      <div class="title">
+        <h1>Special Packs</h1>
+        <p>Select pricing plan to get more</p>
+      </div>
+      <div class="container d-flex justify-content-between">
+        <Packs />
+      </div>
+    </section>
 
 
     <!-- Sezione cards articles -->
@@ -144,15 +154,7 @@ export default {
   }
 }
 
-// PRIMA SECTION - TIMING 
-.packagesCards {
-  border: 2px solid black;
-  height: 200px;
-  background-color: bisque;
-}
-
 // SEZIONE MOVING CARDS
-
 .moving .container {
   padding: 80px 0;
 
