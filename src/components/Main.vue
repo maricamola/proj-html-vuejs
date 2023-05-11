@@ -1,5 +1,6 @@
 <script>
 import Timing from './Timing.vue'
+import CyclingTrainings from './CyclingTrainings.vue'
 import CardsEvents from './CardsEvents.vue'
 import TrainerProfiles from './TrainerProfiles.vue'
 import Articles from './Articles.vue'
@@ -21,7 +22,8 @@ export default {
     CardsEvents,
     Articles,
     Timing,
-    TrainerProfiles
+    TrainerProfiles,
+    CyclingTrainings
   }
 }
 </script>
@@ -64,7 +66,16 @@ export default {
     </section>
 
     <!-- Sezione cards swiper -->
-    <section class="swiperCards">Cards slider</section>
+    <section class="swiperCards">
+      <div class="title">
+        <h1>Our Professional Cycling Trainings</h1>
+        <p>Learn from the mountain biking expert.</p>
+      </div>
+
+      <div class="container-fluid">
+        <CyclingTrainings />
+      </div>
+    </section>
 
 
     <!-- Sezione cards eventi -->
@@ -100,7 +111,6 @@ export default {
     <section class="packagesCards">Cards pacchetti</section>
 
 
-
     <!-- Sezione cards articles -->
     <section class="articles">
       <div class="title">
@@ -122,18 +132,24 @@ export default {
 @use '../scss/main.scss';
 @use '../scss/partials/vars.scss';
 
-// PRIMA SECTION - TIMING 
+//PER TUTTE LE SECTION
+.title {
+  text-align: center;
+  margin-bottom: 40px;
 
-.swiperCards,
+  h3 {
+    font-size: 22px;
+    line-height: 1.42;
+    font-weight: 700;
+  }
+}
+
+// PRIMA SECTION - TIMING 
 .packagesCards {
   border: 2px solid black;
   height: 200px;
   background-color: bisque;
 }
-
-// section  {
-//   padding: 100px;
-// }
 
 // SEZIONE MOVING CARDS
 
@@ -189,15 +205,9 @@ export default {
   }
 }
 
-.title {
-  text-align: center;
-  margin-bottom: 40px;
-
-  h3 {
-    font-size: 22px;
-    line-height: 1.42;
-    font-weight: 700;
-  }
+// SEZIONE CYCLING TRAININGS/CARDS SWIPER
+.swiperCards {
+  padding: 100px 0;
 }
 
 // SEZIONE ARTICOLI 

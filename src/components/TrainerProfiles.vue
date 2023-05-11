@@ -59,6 +59,12 @@ export default {
   ul {
     list-style: none;
     padding: 0;
+    margin: 10px;
+  }
+
+  li i {
+    font-size: 16px;
+    margin: 5px;
   }
 }
 </style>

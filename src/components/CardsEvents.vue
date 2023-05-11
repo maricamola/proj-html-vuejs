@@ -19,7 +19,7 @@ export default {
 
 
 <template>
-  <div class="card" style="width: 24rem;">
+  <div class="card" style="width: 28rem;">
     <span class="date">Numb <br> Mese</span>
     <img :src="image" :alt="bike - event">
     <div class="card-body">
