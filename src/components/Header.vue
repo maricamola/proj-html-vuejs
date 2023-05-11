@@ -109,7 +109,7 @@ header {
   }
 
   ul li {
-    margin: 0 10px;
+    margin: 0 20px;
     font-size: 18px;
     font-weight: 500;
     display: block;
@@ -138,6 +138,10 @@ header {
     background-color: black;
     padding: 20px;
     margin-left: 20px;
+
+    h6 {
+      font-weight: 700;
+    }
   }
 
   .toggle i {

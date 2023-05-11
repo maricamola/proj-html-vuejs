@@ -9,6 +9,8 @@ import plans from '../scss/data/plans';
 import stories from '../scss/data/stories';
 import events from '../scss/data/events';
 import bikers from '../scss/data/bikers';
+import Swiper from 'swiper';
+import 'swiper/css';
 
 
 export default {
@@ -28,7 +30,8 @@ export default {
     TrainerProfiles,
     CyclingTrainings,
     Packs,
-  }
+    Swiper,
+  },
 }
 </script>
 
@@ -178,6 +181,16 @@ export default {
 
   .text {
     padding: 30px;
+
+    h2 {
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
+
+    h3 {
+      font-size: 20px;
+      font-weight: 700;
+    }
   }
 
   .gift,
