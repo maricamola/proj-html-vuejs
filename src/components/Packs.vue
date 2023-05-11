@@ -1,6 +1,15 @@
 <script>
+import plans from '../scss/data/plans';
+
 export default {
-  name: 'Packs'
+  name: 'Packs',
+  components: {
+    plans
+  },
+  props: {
+    type: String,
+    price: Number
+  }
 }
 </script>
 
@@ -15,7 +24,7 @@ export default {
         <!-- <span><i class="fa-sharp fa-solid fa-helmet-safety"></i></span> -->
         <!-- <span><i class="fa-solid fa-crown"></i></span> -->
 
-        <h1>Piano</h1>
+        <h1>{{ type }}</h1>
         <p>Learn to ride a bike from the professionals.</p>
         <ul class="list-group list-group-flush">
           <li class="list-group-item">✓ Phone Mountaineer bike training</li>
@@ -24,13 +33,11 @@ export default {
           <li class="list-group-item">✗ Saafety helmet on bike</li>
           <li class="list-group-item">✗ Free bikes for children</li>
         </ul>
-        <h1>Piano</h1>
-        <span>Costo</span>
       </div>
 
       <div class="theback">
-        <h1>Piano</h1>
-        <span>Costo</span>
+        <h1>{{ type }}</h1>
+        <span>{{ price }}</span>
         <div><button type="button" class="btn btn-dark">Send Request!</button></div>
       </div>
 
@@ -48,6 +55,7 @@ export default {
   text-align: center;
   display: flex;
   align-items: center;
+
 }
 
 .thecard {

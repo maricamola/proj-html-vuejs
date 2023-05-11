@@ -5,6 +5,7 @@ import CardsEvents from './CardsEvents.vue'
 import TrainerProfiles from './TrainerProfiles.vue'
 import Packs from './Packs.vue'
 import Articles from './Articles.vue'
+import plans from '../scss/data/plans';
 import stories from '../scss/data/stories';
 import events from '../scss/data/events';
 import bikers from '../scss/data/bikers';
@@ -17,6 +18,7 @@ export default {
       events,
       stories,
       bikers,
+      plans,
     }
   },
   components: {
@@ -116,7 +118,7 @@ export default {
         <p>Select pricing plan to get more</p>
       </div>
       <div class="container d-flex justify-content-between">
-        <Packs />
+        <Packs v-for="(plan, index) in plans" :key="index" :type="plan.type" :price="plan.price" />
       </div>
     </section>
 
