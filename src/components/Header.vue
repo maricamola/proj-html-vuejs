@@ -12,12 +12,24 @@ export default {
 
       <div class="navbar d-flex">
         <ul>
-          <li>Home</li>
-          <li>About Us</li>
-          <li>Training</li>
-          <li>Packages</li>
-          <li>Blog</li>
-          <li>Contact</li>
+          <li>Home
+            <div class="line"></div>
+          </li>
+          <li>About Us
+            <div class="line"></div>
+          </li>
+          <li>Training
+            <div class="line"></div>
+          </li>
+          <li>Packages
+            <div class="line"></div>
+          </li>
+          <li>Blog
+            <div class="line"></div>
+          </li>
+          <li>Contact
+            <div class="line"></div>
+          </li>
         </ul>
       </div>
 
@@ -80,7 +92,6 @@ header {
   width: 100%;
   z-index: 999;
   background-color: white;
-  display: flex;
   justify-content: center;
 
   .container-fluid {
@@ -101,6 +112,21 @@ header {
     margin: 0 10px;
     font-size: 18px;
     font-weight: 500;
+    display: block;
+  }
+
+  .line {
+    width: 5px;
+    height: 3px;
+    background-color: white;
+    transition: width 1s;
+  }
+
+  li:hover .line {
+    display: block;
+    transition-timing-function: ease;
+    background-color: black;
+    width: 100%;
   }
 
   .backdrop i {
