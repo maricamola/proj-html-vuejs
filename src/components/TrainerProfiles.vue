@@ -44,6 +44,10 @@ export default {
   color: white;
   text-align: center;
 
+  &:hover {
+    filter: brightness(0.5);
+  }
+
   img {
     position: relative;
   }
