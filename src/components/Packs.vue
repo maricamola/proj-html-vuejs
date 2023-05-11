@@ -8,6 +8,7 @@ export default {
   },
   props: {
     type: String,
+    img: String,
     price: Number
   }
 }
@@ -20,11 +21,12 @@ export default {
     <div class="thecard">
 
       <div class="thefront">
-        <span><i class="fa-sharp fa-regular fa-handshake"></i></span>
+        <span><img :src="img" :alt="Basic"></span>
+        <!-- <i class="fa-sharp fa-regular fa-handshake"></i> -->
         <!-- <span><i class="fa-sharp fa-solid fa-helmet-safety"></i></span> -->
         <!-- <span><i class="fa-solid fa-crown"></i></span> -->
 
-        <h1>{{ type }}</h1>
+        <h3>{{ type }}</h3>
         <p>Learn to ride a bike from the professionals.</p>
         <ul class="list-group list-group-flush">
           <li class="list-group-item">✓ Phone Mountaineer bike training</li>
@@ -36,8 +38,8 @@ export default {
       </div>
 
       <div class="theback">
-        <h1>{{ type }}</h1>
-        <span>{{ price }}</span>
+        <h3>{{ type }}</h3>
+        <span class="price">{{ price }}</span>
         <div><button type="button" class="btn btn-dark">Send Request!</button></div>
       </div>
 
@@ -48,6 +50,9 @@ export default {
 
 
 <style lang="scss" scoped>
+@use '../scss/main.scss';
+@use '../scss/partials/vars.scss';
+
 .maincontainer {
   width: 300px;
   height: 550px;
@@ -55,7 +60,6 @@ export default {
   text-align: center;
   display: flex;
   align-items: center;
-
 }
 
 .thecard {
@@ -73,7 +77,7 @@ export default {
   transform: rotateY(180deg);
 }
 
-h1,
+h3,
 p {
   margin: 10px;
 }
@@ -90,6 +94,11 @@ p {
   overflow: hidden;
   background: black;
   color: white;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+
+  img {
+    width: 20%;
+  }
 }
 
 .theback {
@@ -99,6 +108,7 @@ p {
   width: 100%;
   height: 100%;
   border-radius: 10px;
+  // Effetto specchiato
   backface-visibility: hidden;
   overflow: hidden;
   background: black;
@@ -108,6 +118,17 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+
+  h3 {
+    margin-top: 80px;
+  }
+
+  .price {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 80px;
+  }
 }
 
 .btn-dark {

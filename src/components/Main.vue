@@ -118,7 +118,7 @@ export default {
         <p>Select pricing plan to get more</p>
       </div>
       <div class="container d-flex justify-content-between">
-        <Packs v-for="(plan, index) in plans" :key="index" :type="plan.type" :price="plan.price" />
+        <Packs v-for="(plan, index) in plans" :key="index" :type="plan.type" :price="plan.price" :img="plan.img" />
       </div>
     </section>
 
@@ -126,7 +126,7 @@ export default {
     <!-- Sezione cards articles -->
     <section class="articles">
       <div class="title">
-        <h2> Resent New & Articles </h2>
+        <h1> Resent New & Articles </h1>
         <p>
           Important information about bike </p>
       </div>
@@ -147,12 +147,11 @@ export default {
 //PER TUTTE LE SECTION
 .title {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
 
-  h3 {
-    font-size: 22px;
+  h1 {
     line-height: 1.42;
-    font-weight: 700;
+    font-weight: 800;
   }
 }
 
@@ -217,7 +216,8 @@ export default {
 // SEZIONE ARTICOLI 
 
 .articles,
-.trainersCards {
+.trainersCards,
+.packagesCards {
   background-color: #FBFBFB;
   padding: 100px 0;
 }

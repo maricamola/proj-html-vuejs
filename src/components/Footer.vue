@@ -6,7 +6,7 @@ export default {
 
 <template>
   <footer>
-    <div class="container-fluid d-flex justify-content-between">
+    <div class="container-fluid d-flex justify-content-between align-items-baseline">
 
       <section class="icons d-flex flex-column">
         <span><img src="logo-footer-gobike.png" alt="logo"></span>
@@ -52,6 +52,7 @@ export default {
         </ul>
       </section>
     </div>
+    <div class="copyright">© 2023 Gobike - All Rights Reserved.</div>
   </footer>
 </template>
 
@@ -62,7 +63,11 @@ export default {
 footer {
   background-color: black;
   color: white;
-  padding: 100px;
+  padding: 10px 40px;
+
+  .copyright {
+    text-align: center;
+  }
 
   .container-fluid img {
     width: 200px;
@@ -88,5 +93,22 @@ footer {
     font-family: "Font Awesome 6 Solid";
     margin-right: 10px;
   }
+}
+
+.subscribe input,
+.subscribe button {
+  border-radius: 0;
+  width: 300px;
+  height: 50px;
+}
+
+.subscribe span,
+input,
+button {
+  margin: 10px 0;
+}
+
+.icons span {
+  margin: 10px 0;
 }
 </style>

@@ -100,6 +100,7 @@ header {
   ul li {
     margin: 0 10px;
     font-size: 18px;
+    font-weight: 500;
   }
 
   .backdrop i {
