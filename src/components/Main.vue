@@ -1,9 +1,12 @@
 <script>
 import Timing from './Timing.vue'
 import CardsEvents from './CardsEvents.vue'
+import TrainerProfiles from './TrainerProfiles.vue'
 import Articles from './Articles.vue'
 import stories from '../scss/data/stories';
 import events from '../scss/data/events';
+import bikers from '../scss/data/bikers';
+
 
 export default {
   name: 'Main',
@@ -11,12 +14,14 @@ export default {
     return {
       events,
       stories,
+      bikers,
     }
   },
   components: {
     CardsEvents,
     Articles,
-    Timing
+    Timing,
+    TrainerProfiles
   }
 }
 </script>
@@ -78,10 +83,23 @@ export default {
     </section>
 
     <!-- Sezione cards trainers -->
-    <section class="trainersCards">Cards profili trainers</section>
+    <section class="trainersCards">
+      <div class="title">
+        <h1>Our Expert Trainers</h1>
+        <p>Learn to ride a bike from the experts.</p>
+      </div>
+      <div class="container-fluid d-flex justify-content-between">
+
+        <TrainerProfiles v-for="(biker, index) in bikers" :key="index" :image="biker.image" :name="biker.name"
+          :work="biker.work" />
+
+      </div>
+    </section>
 
     <!-- Sezione cards packages -->
     <section class="packagesCards">Cards pacchetti</section>
+
+
 
     <!-- Sezione cards articles -->
     <section class="articles">
@@ -107,7 +125,6 @@ export default {
 // PRIMA SECTION - TIMING 
 
 .swiperCards,
-.trainersCards,
 .packagesCards {
   border: 2px solid black;
   height: 200px;
@@ -185,9 +202,10 @@ export default {
 
 // SEZIONE ARTICOLI 
 
-.articles {
+.articles,
+.trainersCards {
   background-color: #FBFBFB;
-  padding: 150px 0;
+  padding: 100px 0;
 }
 
 .container-fluid {
