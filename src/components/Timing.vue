@@ -21,12 +21,11 @@ export default {
       onSlideChange,
     };
   },
-
   mounted() {
     // const mySwiper = new Swiper('.swiper-container', {
     //   // opzioni swiper
     // });
-  },
+  }
 }
 </script>
 
