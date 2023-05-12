@@ -49,7 +49,7 @@ export default {
     <div class="card-body">
       <h3>{{ title }}</h3>
       <p class="card-text">
-        <i class="fa-sharp fa-regular fa-clock"></i> {{ randomFormattedDate }} @ {{ time }} - @ {{ randomFormattedDate }}
+        <i class="fa-sharp fa-regular fa-clock"></i> {{ randomFormattedDate }} @ {{ time }} - @ {{ date }}
         @ {{ time }}
       </p>
       <p><i class="fa-solid fa-location-dot"></i> {{ country }} </p>
