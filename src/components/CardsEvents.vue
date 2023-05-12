@@ -13,19 +13,44 @@ export default {
     time: Number,
     country: String,
     type: String,
-  }
-}
+  },
+  data() {
+    return {
+      startDate: new Date(), //Data attuale
+      endDate: new Date(2023, 10, 10), //Data fine eventi
+    };
+  },
+  methods: {
+    generateRandomDate() {
+      const randomDate = new Date(
+        this.startDate.getTime() + Math.random() * (this.endDate.getTime() - this.startDate.getTime())
+      );
+      // Formatto la data nel formato "dd/mm/yyyy"
+      const day = randomDate.getDate();
+      const month = randomDate.getMonth() + 1; //Aggiunto +1 perchè i mesi partono da gennaio
+      const year = randomDate.getFullYear();
+      return `${day}/${month.toString().padStart(2, '0')}/${year}`; //.padStart per impostare l'output su due cifre
+    },
+  },
+  computed: {
+    randomFormattedDate() {
+      return this.generateRandomDate();
+    },
+  },
+};
+
 </script>
 
 
 <template>
   <div class="card" style="width: 28rem;">
-    <span class="date">Numb <br> Mese</span>
+    <span class="date">{{ randomFormattedDate }}</span>
     <img :src="image" :alt="bike - event">
     <div class="card-body">
       <h3>{{ title }}</h3>
       <p class="card-text">
-        <i class="fa-sharp fa-regular fa-clock"></i> {{ date }} @ {{ time }} - @ {{ date }} @ {{ time }}
+        <i class="fa-sharp fa-regular fa-clock"></i> {{ randomFormattedDate }} @ {{ time }} - @ {{ randomFormattedDate }}
+        @ {{ time }}
       </p>
       <p><i class="fa-solid fa-location-dot"></i> {{ country }} </p>
       <p class="event-type">{{ type }}</p>

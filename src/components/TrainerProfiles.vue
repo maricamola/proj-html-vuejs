@@ -45,6 +45,7 @@ export default {
   text-align: center;
 
   &:hover {
+    transition: 1s;
     filter: brightness(0.5);
   }
 

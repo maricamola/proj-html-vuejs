@@ -1,7 +1,10 @@
 <script>
 import { Swiper, SwiperSlide } from 'swiper/vue';
+import { Keyboard, Pagination, Navigation, Autoplay } from 'swiper';
 // Import Swiper styles
 import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 
 export default {
   name: 'Timing',
@@ -19,6 +22,7 @@ export default {
     return {
       onSwiper,
       onSlideChange,
+      modules: [Keyboard, Pagination, Navigation, Autoplay],
     };
   },
   mounted() {
@@ -32,8 +36,13 @@ export default {
 
 
 <template>
-  <swiper :modules="modules" :slides-per-view="1" :space-between="50"
-    :navigation="{ nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' }" :pagination="{ clickable: true }"
+  <swiper class="mySwiper" :modules="modules" :loop="true" :slides-per-view="1" :space-between="50" :centeredSlides="true"
+    :autoplay="{
+      delay: 4000,
+      disableOnInteraction: false,
+    }" :keyboard="{
+  enabled: true,
+}" :navigation="{ nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' }" :pagination="{ clickable: true }"
     :scrollbar="{ draggable: true }" @swiper="onSwiper" @slideChange="onSlideChange">
     <div class="swiper-button-prev"></div>
     <div class="swiper-button-next"></div>

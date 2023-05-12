@@ -1,4 +1,3 @@
-
 <script>
 export default {
   name: 'Header'
@@ -18,8 +17,18 @@ export default {
           <li>About Us
             <div class="line"></div>
           </li>
-          <li>Training
+          <li class="dropdown">Training
             <div class="line"></div>
+            <div class="dropdown-content">
+              <ul class="menu d-flex flex-column">
+                <li>Riding Lesson</li>
+                <li>Safe Driving</li>
+                <li>Mountain Bike</li>
+                <li>Trail Drive</li>
+                <li>Pedaling</li>
+                <li>All Trainings</li>
+              </ul>
+            </div>
           </li>
           <li>Packages
             <div class="line"></div>
@@ -127,6 +136,33 @@ header {
     transition-timing-function: ease;
     background-color: black;
     width: 100%;
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+
+    ul {
+      padding: 0 5px;
+    }
+
+    ul li {
+      margin: 10px 5px;
+    }
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 140px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 10px;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
   }
 
   .backdrop i {

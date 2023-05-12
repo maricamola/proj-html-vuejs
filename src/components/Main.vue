@@ -92,6 +92,10 @@ export default {
         <p>Get the amazing cycling experience.</p>
       </div>
 
+      <span class="eventsTitle">
+        <h3>Events</h3>
+      </span>
+
       <div class="container-fluid d-flex justify-content-between">
 
         <CardsEvents v-for="(event, index) in events" :key="index" :image="event.image" :title="event.title"
@@ -156,6 +160,11 @@ export default {
     line-height: 1.42;
     font-weight: 800;
   }
+}
+
+.eventsTitle h3 {
+  margin-left: 40px;
+  font-weight: 100;
 }
 
 // SEZIONE MOVING CARDS

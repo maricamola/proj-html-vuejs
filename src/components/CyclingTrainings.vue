@@ -1,7 +1,12 @@
 <script>
 import { Swiper, SwiperSlide } from 'swiper/vue';
+import { Keyboard, Pagination, Navigation } from 'swiper';
 // Import Swiper styles
 import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+
+
 
 export default {
   name: 'CyclingTrainings',
@@ -19,6 +24,7 @@ export default {
     return {
       onSwiper,
       onSlideChange,
+      modules: [Keyboard, Pagination, Navigation],
     };
   },
   mounted() {
@@ -33,8 +39,9 @@ export default {
 
 
 <template>
-  <swiper :modules="modules" :slides-per-view="4" :space-between="50"
-    :navigation="{ nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' }" :pagination="{ clickable: true }"
+  <swiper :modules="modules" :slides-per-view="4" :space-between="50" :keyboard="{
+    enabled: true,
+  }" :navigation="{ nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' }" :pagination="{ clickable: true }"
     :scrollbar="{ draggable: true }" @swiper="onSwiper" @slideChange="onSlideChange">
     <swiper-slide>
       <div class="image-container"> <img src="training-box-4.jpg" alt="Bike">
